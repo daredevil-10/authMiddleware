@@ -8,6 +8,11 @@ const JWT_SECRET = "kuch_bhi";
 
 app.use(express.json());
 
+app.get("/" , (req , res)=>
+{
+    res.sendFile(__dirname+"/public/index.html")
+})
+
 app.post("/signup" , (req,res)=>
 {
     const username = req.body.username;
